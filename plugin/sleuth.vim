@@ -117,6 +117,7 @@ endfunction
 
 function! s:apply_if_ready(options) abort
   if !has_key(a:options, 'expandtab') || !has_key(a:options, 'shiftwidth')
+    let g:space_tabs = 1
     return 0
   else
     for [option, value] in items(a:options)
